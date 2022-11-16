@@ -1,0 +1,9 @@
+*_minted*
+*.venv
+__pycache__
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
