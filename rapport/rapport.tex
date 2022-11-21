@@ -62,7 +62,7 @@
 \setlength{\headheight}{42pt}
 \setlength{\headsep}{15pt}
 
-\lhead{\textsc{???} Andréa - XXXXXXX\\textsc{TREMBLY} Timothée - XXXXXXX\\\textsc{ROHMAN} Shahriar - 2164342}
+\lhead{\textsc{GOURION} Andréa - XXXXXXX\\{TREMBLY} Timothée - XXXXXXX\\\textsc{ROHMAN} Shahriar - 2164342}
 \chead{}
 \rhead{\includegraphics[scale=0.12]{img/poly-logo.png}}
 \lfoot{\textsc{Polytechnique Montréal}}
@@ -119,11 +119,11 @@ splitbottomskip=6pt,splittopskip=12pt]
 
 \subsection{Data cleaning}
 
-\paragraph{} On a enlevé les NaN
+\paragraph{} On a enlevé les NaN. We simply removed all the rows that contained NaN values. We also removed the rows that contained the string "Insert smth"...
 
 \subsection{Data transformation}
 
-\paragraph{} On a converti les string en int à partir de dictionnaires
+\paragraph{} On a converti les string en int à partir de dictionnaires. Pour la colonne "Id", on a simplement enlevé "ConcertExperience\_" devant l'Id du concert afin d'éviter de créer un dictionnaire trop gros et d'aller plus vite dans le traitement.
 
 \section{Modélisation}
 
