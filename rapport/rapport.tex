@@ -1,0 +1,139 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}     
+\usepackage[utf8]{inputenc}  % Accents codés dans la fonte
+\usepackage{natbib}
+\usepackage[french]{babel}  % Les traductions françaises
+\usepackage{numprint}        % \numprint(9,36) pour utilisation de la virgule comme séparateur décimal
+\usepackage{caption}
+\usepackage{amsmath}         % Les maths de base
+
+\usepackage[svgnames]{xcolor}% Pour les besoins de PythonTeX
+\usepackage{minted}          % Pour présenter du code quelconque (C, java,...)
+\usepackage[margin=2.5cm]{geometry}
+
+%\usepackage{tgpagella}       % Pour changer un peu les fontes
+%\usepackage{tgadventor}
+%\usepackage{inconsolata}
+\usepackage{lmodern}
+
+
+% %\usepackage{minted}
+% \usepackage{pythontex}       % Utilisation de PythonTeX
+
+%\usepackage{sagetex}        % Utilisation de SageMath
+
+\usepackage{graphicx}        % Gestion des inclusions graphiques
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{titlepic}
+%\usepackage[frenchb]{babel} \usepackage{hyperref}
+
+\usepackage{comment} % Pour pouvoir commenter facilement
+
+% \usepackage{tikz}            % Si on veut présenter le code Python
+% \usepackage[framemethod=TikZ]{mdframed}
+% % Un environnement pour faire joli pour présenter le code Python
+% \usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+% \usepackage{hyperref}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{perpage}
+\usepackage[bottom]{footmisc}
+\usepackage{lipsum}
+\usepackage{colortbl}
+\usepackage{hyperref}
+\usepackage{caption}
+
+% Couleurs
+\definecolor{rouge_doux}{RGB}{241, 148, 138}
+\definecolor{rouge_moyen}{RGB}{236, 112, 99}
+\definecolor{gris}{RGB}{224, 224, 224}
+
+% Tableaux
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
+
+\MakePerPage{footnote} %Note bas de pages
+
+% en-têtes et pieds de page
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt} 
+\setlength{\headheight}{42pt}
+\setlength{\headsep}{15pt}
+
+\lhead{\textsc{GOURION} Andréa - 2232257\\{TREMBLY} Timothée - XXXXXXX\\\textsc{ROHMAN} Shahriar - 2164342}
+\chead{}
+\rhead{\includegraphics[scale=0.12]{img/poly-logo.png}}
+\lfoot{\textsc{Polytechnique Montréal}}
+\cfoot{Page \thepage/\pageref{LastPage}}
+\rfoot{\today}
+
+\newenvironment{code}{%
+\begin{mdframed}[linecolor=Green,innerrightmargin=30pt,innerleftmargin=30pt,
+backgroundcolor=Black!5,
+skipabove=10pt,skipbelow=10pt,roundcorner=5pt,
+splitbottomskip=6pt,splittopskip=12pt]
+}{%
+\end{mdframed}
+}
+
+% Un raccourci pour composer les unités en caractères droits
+\newcommand{\U}[1]{~\mathrm{#1}}
+
+% Présentation de l'abstract pour la problématique
+% \usepackage[runin]{abstract}
+
+% Un environnement pour la problématique
+% \newenvironment{problematique}{
+% \renewcommand{\abstractname}{Problématique}
+% \begin{abstract}
+%}{
+%\paragraph{}
+%
+%\end{abstract}
+%}
+
+%régler l'espacement entre les lignes
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% Titre et auteurs du document
+\begin{document}
+
+\input{./title.tex}
+
+% % Pour afficher la numérotation à droite et non au centre
+\pagestyle{fancy}
+
+%\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+\section{Pre-processing}
+
+\subsection{Problématique}
+
+\paragraph{} Données manquantes, données en chaînes de caractères, données aberrantes, ect...
+
+\subsection{Data cleaning}
+
+\paragraph{} On a enlevé les NaN. We simply removed all the rows that contained NaN values. We also removed the rows that contained the string "Insert smth"...
+
+\subsection{Data transformation}
+
+\paragraph{} On a converti les string en int à partir de dictionnaires. Pour la colonne "Id", on a simplement enlevé "ConcertExperience\_" devant l'Id du concert afin d'éviter de créer un dictionnaire trop gros et d'aller plus vite dans le traitement.
+
+\section{Modélisation}
+
+\subsection{Comparaison des modèles}
+
+\paragraph{} On a comparé les modèles suivants : SVM, KNN, Random Forest, Decision Tree, Logistic Regression, Naive Bayes, ect...
+
+\subsection{Modèle choisi}
+
+\paragraph{} On a choisi le modèle XX qui donne les résultats suivants :
+
+
+\end{document}
